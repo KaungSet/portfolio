@@ -1,286 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* Custom Styles */
-      body {
-        padding-top: 56px; /* Adjust for fixed navbar */
-      }
 
-      .hero-section {
-        padding: 100px 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyaw Kaung Set Portfolio</title>
 
-      .about-section img {
-        max-width: 60%;
-        height: auto;
-      }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-      .projects-section .card {
-        transition: transform 0.3s ease;
-      }
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
-      .projects-section .card:hover {
-        transform: translateY(-10px);
-      }
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
 
-      .contact-section {
-        background-color: #f8f9fa;
-      }
+  <style>
+    body {
+      padding-top: 56px;
+    }
 
-      /* Custom Carousel Styles */
-      .carousel-item img {
-        cursor: pointer; /* Show pointer cursor on hover */
-        border-radius: 10px; /* Rounded corners for carousel images */
-      }
+    .gap-section {
+      margin-bottom: 30px;
+    }
 
-      /* Custom Modal Styles */
-      .modal-body img {
-        border-radius: 10px; /* Rounded corners for modal images */
-        margin-bottom: 15px; /* Space between images */
-      }
+    .hero-section {
+      padding: 100px 0;
+    }
 
-      /* Add margin between the carousels */
-      .projects-section .col-md-6 {
-        margin-bottom: 20px;
-      }
+    .about-section img {
+      max-width: 60%;
+      height: auto;
+    }
 
-      /* Custom Carousel Styles */
-      .carousel-item img {
-        cursor: pointer; /* Show pointer cursor on hover */
-        border-radius: 10px; /* Rounded corners for carousel images */
-      }
+    .projects-section .card {
+      transition: transform 0.3s ease;
+    }
 
-      b {
-        color: blue;
-      }
+    .projects-section .card:hover {
+      transform: translateY(-10px);
+    }
 
-      .pj-img {
-        max-height: 400px;
-      }
+    .contact-section {
+      background-color: #f8f9fa;
+    }
 
-      /* Contact Icons */
-      .contact-icons a {
-        font-size: 2rem;
-        margin: 0 10px;
-        color: #0077b5; /* LinkedIn blue */
-        text-decoration: none;
-        display: inline-block; /* Ensures transform works properly */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      }
 
-      .contact-icons a:hover {
-        transform: scale(1.5); /* Enlarges the icon to 1.5 times its size */
-        opacity: 0.8;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+    .carousel-item img {
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .modal-body img {
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .projects-section .col-md-6 {
+      margin-bottom: 20px;
+    }
+
+    b {
+      color: blue;
+    }
+
+    .pj-img {
+      max-height: 400px;
+    }
+
+    /* Contact Icons */
+    .contact-icons a {
+      font-size: 2rem;
+      margin: 0 10px;
+      color: #0077b5;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.5);
+      opacity: 0.8;
+    }
+
+    a:hover i.fas.fa-hand-point-right {
+      transform: translateX(4px);
+      transition: transform 0.2s ease-in-out;
+      color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section bg-light text-dark text-center py-5 fw-b">
+    <div class="container">
+      <h1 class="display-4">Kyaw Kaung Set</h1>
+      <p class="lead">Software Engineer</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">About Me</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="https://github.com/KaungSet/portfolio/blob/4c5f8b6900aaa79ed32ca3cc5b0f05efa8ec53df/IMG_3380.JPG?raw=true"
+            alt="Kyaw Kaung Set's Profile Picture" class="img-fluid rounded-3 shadow" loading="lazy" />
         </div>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="hero-section bg-light text-dark text-center py-5 fw-b"
-    >
-      <div class="container">
-        <h1 class="display-4">Kyaw Kaung Set</h1>
-        <p class="lead">Software Engineer</p>
-      </div>
-    </section>
+        <div class="col-md-6">
 
-    <!-- About Section -->
-    <section id="about" class="about-section py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">About Me</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <img
-              src="https://github.com/KaungSet/portfolio/blob/4c5f8b6900aaa79ed32ca3cc5b0f05efa8ec53df/IMG_3380.JPG?raw=true"
-              alt="Profile Picture"
-              class="img-fluid rounded-3"
-            />
-          </div>
-          <div class="col-md-6">
-            <p>Hello! I'm a Software Engineer with experience in</p>
-            <ul>
-              <li><b>POS System</b></li>
-              <li><b>HR Management System</b></li>
-              <li><b>Restruant Management System</b></li>
-              <li><b>Live Chat Applicaton</b></li>
-              <li><b>Developing Blog Site</b></li>
-              <li><b>Responsive Static Website</b></li>
-            </ul>
+          <p>Hello! I'm a Software Engineer with experience in</p>
+          <ul>
+            <li><b>POS System</b></li>
+            <li><b>HR Management System</b></li>
+            <li><b>Restaurant Management System</b></li>
+            <li><b>Live Chat Web Application</b></li>
+            <li><b>Video / Music Streaming Website</b></li>
+            <li><b>Developing Blog Sites</b></li>
+            <li><b>Responsive Static Website</b></li>
+            <li><b>Server Setup</b></li>
+          </ul>
+          <!-- Button to Trigger Modal -->
+          <button class="btn btn-sm btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#realProjectsModal">
+            See More Project Details...
+          </button>
 
-            <h3>Education</h3>
-            <ul style="margin-bottom: 30px">
-              <li>B.E. (Electronics)</li>
-              <li>
-                Diploma in IT ( National Centre for Human Resource Development )
-              </li>
-            </ul>
+          <!-- Modal -->
+          <div class="modal fade" id="realProjectsModal" tabindex="-1" aria-labelledby="projectsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="projectsModalLabel">Project Highlights</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
-            <h3>Other Qualification</h3>
-            <ul style="margin-bottom: 30px">
-              <li>Fairway Technology ( Professional Web Developer Course )</li>
-            </ul>
+                  <!-- Project 1 -->
+                  <h6 class="fw-bold text-primary">POS System For Mobile Phone Shops</h6>
+                  <p>This application is designed for a company to manage their phone distribution.</p>
+                  <ul>
+                    <li>Sale return: cash or exchange</li>
+                    <li>Order process: cash, credit, or consignment</li>
+                    <li>Promotion, discount, and cash down support</li>
+                    <li>Activity logs for all actions</li>
+                    <li>Minimum stock alert</li>
+                    <li>Comprehensive reports (sale, purchase, return, damage)</li>
+                    <li>Delivery tracking with status</li>
+                    <li>Notifications for order, sale, purchase</li>
+                    <li>Dashboard showing monthly, weekly, or yearly records</li>
+                  </ul>
+                  <p><strong>Environment:</strong> Laravel, JS, AJAX, MySQL, Tailwind, Livewire, Jira</p>
+                  <hr>
 
-            <h3>Tech Skill</h3>
-            <ul style="margin-bottom: 30px">
-              <li>PHP, Laravel, Javascript, Angular</li>
-              <li>HTML, CSS, Bootstrap, Tailwind</li>
-              <li>Wordpress, Squarespace</li>
-              <li>Developer Tools</li>
-              <ul>
-                <li>FileZilla, Postman, github, Jira, Clickup, WSL2</li>
-              </ul>
-            </ul>
-            <button
-              class="btn btn-sm btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#techSkillsModal"
-            >
-              More About Tech Skills
-            </button>
+                  <h6 class="text-primary">Appzgate Company</h6>
+                  <p><strong>Front-End Development Experience</strong></p>
+                  <ul>
+                    <li><a href="https://titansmarttech.com.sg/" target="_blank">titansmarttech.com.sg</a></li>
+                    <li><a href="https://hongdattechnical.ae/" target="_blank">hongdattechnical.ae</a></li>
+                    <li><a href="https://www.hdcontractor.co.nz/" target="_blank">hdcontractor.co.nz</a></li>
+                    <li><a href="https://oneness.com.sg/" target="_blank">oneness.com.sg</a></li>
+                    <li><a href="https://www.maxflowengineering.com.sg/" target="_blank">maxflowengineering.com.sg</a>
+                    </li>
+                    <li><a href="https://hde.com.sg/" target="_blank">hde.com.sg</a></li>
+                  </ul>
 
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="techSkillsModal"
-              tabindex="-1"
-              aria-labelledby="techSkillsModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="techSkillsModalLabel">
-                      Technical Skills
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <ul class="list-unstyled">
-                      <li>
-                        <strong>Languages:</strong> PHP, JavaScript, HTML, CSS,
-                        Ajax, Python
-                      </li>
-                      <li>
-                        <strong>Frameworks:</strong> Laravel, JQuery, Bootstrap,
-                        Tailwind CSS
-                      </li>
-                      <li>
-                        <strong>Technology:</strong> WordPress, Google
-                        Analytics, SEO principles
-                      </li>
-                      <li><strong>Databases:</strong> MySQL</li>
-                      <li>
-                        <strong>Developer Tools:</strong> Git, GitLab, GitHub,
-                        Postman, Photoshop, Laragon, Jira, WSL2
-                      </li>
-                      <li>
-                        <strong>Web Server:</strong> Apache Tomcat, WordPress
-                        Server Setup, CI/CD pipelines using GitHub CI/CD
-                      </li>
-                      <li>
-                        <strong>Operating Systems:</strong> Linux (Ubuntu),
-                        Windows 7, 8, 10, 11, WSL, WSL2
-                      </li>
-                      <li>
-                        <strong>Others:</strong> Vue.js, Livewire, Alpine.js,
-                        Passport, Pusher, SweetAlert, Toastr, Sentry
-                      </li>
-                    </ul>
-                  </div>
+                  <p><strong>Key Skills & Responsibilities:</strong></p>
+                  <ul>
+                    <li>Improved SEO with proper semantic HTML structure (e.g., header, section, footer tags).</li>
+                    <li>Optimized and compressed images to improve website loading speed.</li>
+                    <li>Implemented Google ReCaptcha and handled front-end/back-end validation for contact forms.</li>
+                    <li>Configured SMTP for private email servers and resolved spam issues using validation techniques.
+                    </li>
+                    <li>Managed hosting using CPanel (SiteGround, aeserve) and gained hands-on experience with SSH and
+                      Linux environments.
+                    </li>
+                  </ul>
+                  <hr>
+
+                  <h6 class="text-primary">AppzPOS – Restaurant Management System</h6>
+                  <p><strong>Key Features & Contributions:</strong></p>
+                  <ul>
+                    <li>Multi-outlet management under one account.</li>
+                    <li>Integration support for FoodPanda, GrabFood, and Deliveroo.</li>
+                    <li>Supported order modes: Dine-in, Pickup, Delivery, Kiosk, Online, QR Table.</li>
+                    <li>Modifier system: modifier groups, submodifiers, and item assignment logic.</li>
+                    <li>Helped define logic to edit specific modifier groups without affecting imported ones.</li>
+                    <li>Worked on UX logic for submodifier visibility and filter-based advanced search.</li>
+                  </ul>
+                  <hr>
+
+                  <!-- Project 2 -->
+                  <h6 class="fw-bold text-primary">Art Gallery (WordPress)</h6>
+                  <p><a href="https://paiminhtet-studio.com" target="_blank">https://paiminhtet-studio.com</a></p>
+                  <ul>
+                    <li>Custom plugin/widget development</li>
+                    <li>Google Search Console & Developer Console setup</li>
+                    <li>SEO, responsive design, SMTP integration</li>
+                    <li>UI/UX-focused design and performance</li>
+                  </ul>
+                  <p><strong>Environment:</strong> WordPress 6, SMTP, SEO</p>
+                  <hr>
+
+                  <!-- Project 3 -->
+                  <h6 class="fw-bold text-primary">Book Store Project</h6>
+                  <ul>
+                    <li>Advanced search by title, author, category</li>
+                    <li>User/admin roles with authentication</li>
+                    <li>Email verification, order tracking, ACL</li>
+                    <li>Order management and user-friendly interface</li>
+                  </ul>
+                  <p><strong>Environment:</strong> Laravel, JS, AJAX, Bootstrap, GitLab</p>
+                  <hr>
+
+                  <!-- Project 4 -->
+                  <h6 class="fw-bold text-primary">Phone Cover Distribution System</h6>
+                  <ul>
+                    <li>Stock tracking and restocking system</li>
+                    <li>Customer orders, payment methods (credit/full)</li>
+                    <li>Order urgency & status, customer order history</li>
+                    <li>Live search, dashboard insights</li>
+                  </ul>
+                  <p><strong>Environment:</strong> Laravel, JS, AJAX, Bootstrap, Jira</p>
+                  <hr>
+
+                  <!-- Project 5 -->
+                  <h6 class="fw-bold text-primary">Cash Book</h6>
+                  <ul>
+                    <li>Track income & expenses, export reports</li>
+                    <li>Integration-ready with other systems</li>
+                  </ul>
+                  <p><strong>Environment:</strong> Laravel, Tailwind, JS, AJAX, MySQL</p>
+                  <hr>
+
+                  <!-- Project 6 -->
+                  <h6 class="fw-bold text-primary">Warehouse Management Project</h6>
+                  <ul>
+                    <li>Excel import, barcode generation, advanced search</li>
+                    <li>Real-time stock, damage report, returns</li>
+                    <li>Role/permission management</li>
+                    <li>Product transaction tracking, sales rate tracking</li>
+                    <li>Agile workflow, Linux deployment</li>
+                  </ul>
+                  <p><strong>Environment:</strong> Laravel, Livewire, Tailwind, Jira, Linux</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
           </div>
+
+
+          <!-- Education -->
+          <h3>Education</h3>
+          <ul class="gap-section">
+            <li>B.E. (Electronics)</li>
+            <li>
+              Diploma in IT ( National Centre for Human Resource Development )
+            </li>
+          </ul>
+
+          <!-- Other Qualification -->
+          <h3>Other Qualification</h3>
+          <ul class="gap-section">
+            <li>Fairway Technology ( Professional Web Developer Course )</li>
+          </ul>
+
+          <!-- Work Experience -->
+          <h3>Work Experience</h3>
+          <ul class="gap-section">
+            <li class="mb-2">
+              <strong>Full Stack Developer</strong> — <a
+                href="https://www.linkedin.com/company/appzgate/posts/?feedView=all" class="text-decoration-none"
+                target="_blank"><b>Appzgate</b></a><br>
+              <small>Software House, Singapore</small><br>
+              <em>January 2024 – Present</em>
+            </li>
+            <li class="mb-2">
+              <strong>Full Stack Developer</strong> — <a href="https://www.facebook.com/profile.php?id=100089246912351"
+                class="text-decoration-none" target="_blank"><b>Unity Source</b></a><br>
+              <small>Software House, Yangon, Myanmar</small><br>
+              <em>February 2022 – December 2024</em>
+            </li>
+            <li class="mb-2">
+              <strong>Full Stack Developer</strong> — <b>Yoon Han Tharr</b><br>
+              <small>Software House, Yangon, Myanmar</small><br>
+              <em>February 2020 – December 2021</em>
+            </li>
+          </ul>
+
+          <!-- Tech Skill -->
+          <h3>Tech Skill</h3>
+          <ul class="gap-section">
+            <li>PHP, Laravel, Javascript, Angular</li>
+            <li>HTML, CSS, Bootstrap, Tailwind</li>
+            <li>Wordpress, Squarespace</li>
+            <li>Developer Tools</li>
+            <ul>
+              <li>FileZilla, Postman, github, Jira, Clickup, WSL2</li>
+            </ul>
+          </ul>
+          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#techSkillsModal">
+            More About Tech Skills
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="techSkillsModal" tabindex="-1" aria-labelledby="projectsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="projectsModalLabel">Technical Skills</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <strong>Languages:</strong><br> PHP, JavaScript, HTML, CSS, Python
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Frameworks:</strong><br> Laravel, JQuery, Angular.js, Bootstrap, Tailwind CSS
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Technology:</strong><br> WordPress, Squarespace, Google Analytics, SEO principles
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Databases:</strong><br> MySQL
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Developer Tools:</strong><br> Git, GitLab, GitHub, Postman, Photoshop, Laragon, Jira, WSL2
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Web Server:</strong><br> Apache Tomcat, WordPress Setup, GitHub CI/CD, cPanel, Domain
+                      Transfer
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Operating Systems:</strong><br> Linux (Ubuntu), Windows 7–11, WSL, WSL2
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <strong>Others:</strong><br> Vue.js, Livewire, Alpine.js, Ajax, Axios, Passport, Pusher,
+                      SweetAlert,
+                      Toastr,
+                      Sentry, Firebase Cloud Messaging, reCAPTCHA v2, SMTP
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Contact Me</h2>
-        <div class="text-center contact-icons">
-          <!-- LinkedIn Link -->
-          <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <!-- Email Link -->
-          <a href="mailto:your-email@example.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <div class="text-center contact-icons">
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/kyaw-kaung-set-08543b1a2/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <!-- Email Link -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kyawkaungset@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <div class="container">
-        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-      </div>
-    </footer>
+      <h4 class="text-center mt-3">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kyawkaungset@gmail.com" target="_blank" style="
+              text-decoration: none;
+              color: inherit;
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+            ">
+          <i class="fas fa-hand-point-right" style="color: #007bff; font-size: 1.2em" title="Click to send email"></i>
+          kyawkaungset@gmail.com
+        </a>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        <i class="fas fa-copy" id="copyEmail" style="cursor: pointer; margin-left: 10px" title="Copy Email"></i>
+
+        <span id="copiedMsg" style="
+              margin-left: 5px;
+              font-size: 0.9em;
+              color: green;
+              display: none;
+            ">
+          Copied!
+        </span>
+      </h4>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const copyBtn = document.getElementById("copyEmail");
+    const copiedMsg = document.getElementById("copiedMsg");
+
+    copyBtn.addEventListener("click", function () {
+      const email = "kyawkaungset@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        copiedMsg.style.display = "inline";
+
+        // Hide after 2 seconds
+        setTimeout(() => {
+          copiedMsg.style.display = "none";
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+
 </html>
